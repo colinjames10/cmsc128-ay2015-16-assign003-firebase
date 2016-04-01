@@ -1,0 +1,123 @@
+<!-- Colin James P. Naranjo
+     CMSC128 AB-4L
+     Event Guest Attendance -->
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Event Guest Attendance</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body class="grey darken-4">
+	
+<!--	BANNER	-->
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text" style=" text-shadow: 3px 3px 3px black">Event Guest Attendance</h1>
+        <div class="row center">
+          <h5 class="header col s12 white-text" style=" text-shadow: 3px 3px 3px black">Film Festival Attendees</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="cinema2.jpg" style="display: block; transform: translate3d(-50%, 205px, 0px);"></div>
+  </div>
+
+
+<!--	INTERFACE	-->
+
+  <div class="container grey darken-2" style="width: 950px;">
+    <div class="section">
+      <div class="row ">
+          <div class="card col s10 offset-s1 center grey lighten-2" style="height:360px;"><br>
+               <ul class="tabs grey lighten-2">
+		        <li class="tab col s4"><a class="active" href="#input">Input Attendee</a></li>
+		        <li class="tab col s4"><a href="#list">Attendees</a></li>
+		        <li class="tab col s4"><a href="#data">Database</a></li>
+	         </ul>
+	         <div id="input" class="col s12">
+	         <h5 class="header col s12 light">Film Festival Attendees</h5>
+                     <p>Enter the following information to add to your firebase database</p>
+                    <form class="col s12">
+                     <div class="row">
+                       <div class="input-field col s4">
+                         <i class="material-icons prefix">account_circle</i>
+                         <input id="nameInput" type="text" class="validate">
+                         <label for="nameInput">Name</label>
+                       </div>
+                       <div class="input-field col s4">
+                         <i class="material-icons prefix">contacts</i>
+                         <input id="orgInput" type="text" class="validate">
+                         <label for="orgInput">Organization</label>
+                       </div>
+                       <div class="input-field col s4">
+                         <i class="material-icons prefix">contact_phone</i>
+                         <input id="contactInput" type="tel" class="validate">
+                         <label for="contactInput">Contact Number</label>
+                       </div>
+                     </div>
+                   </form>
+                    <button class="btn waves-effect waves-light black z-depth-5" type="submit" id="submitattendee">Submit Attendee
+                       <i class="material-icons right">send</i>
+                    </button>
+	         </div>
+	         <div id="list" class="col s12">
+                    <div class="table-container">
+                        <table class="bordered highlight centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Organization</th>
+                                    <th>Contact Number</th>
+                                </tr>
+                            </thead>
+                            <tbody id="attendeeTable">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+	         </div>
+	         <div id="data" class="col s12"><br>
+	         <p>This is a demonstration of the firebase database through the use of the event guest attendance on a film festival.</p> Check out your database at <a href = "https://naranjo.firebaseio-demo.com//List_Of_Attendees" target="_blank">naranjo.firebaseio-demo.com.</a>
+	         </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!--	PICTURE 	-->
+
+  <div class="parallax-container valign-wrapper">
+    <div class="parallax"><img src="cinema.jpg" style="display: block; transform: translate3d(-50%, 30px, 0px);"></div>
+  </div>
+
+
+<!--	FOOTER WITH CREATORS' INFORMATION	-->
+
+  <footer class="page-footer grey darken-2">
+    <div class="container center-align grey lighten-2"><br>
+      <h5>CMSC128 AB-4L</h5>
+      	  <p>Programming Assignment for CMSC128 - Using the Firebase Database</p>
+          <p>Colin James Naranjo</p><br>
+     </div><br>
+  </footer>
+
+
+<!--	SCRIPTS		-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="cmsc128.js"></script>
+  </body>
+</html>
